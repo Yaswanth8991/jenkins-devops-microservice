@@ -218,23 +218,13 @@
 		</plugins>
 	</build>
 	<distributionManagement>
-	<repositories>
-		<repository>
-			<id>central</id>
-			<url>https://yash05.jfrog.io/artifactory/dev-libs-release/snapshot</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>snapshot</id>
-			<url>https://yash05.jfrog.io/artifactory/dev-libs-snapshot</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
-	</distributionManagement>
+       		<repository>
+         		<id>internal.repo</id>
+         		<name>Internal repo</name>
+         		<url>file:///home/ubuntu</url>
+       		</repository>
+   	</distributionManagement>
+	
 	<pluginRepositories>
 		<pluginRepository>
 			<id>spring-snapshots</id>
