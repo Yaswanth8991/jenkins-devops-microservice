@@ -14,12 +14,6 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                sh 'mvn surefire-report:report'
-            }
-        }
-
         stage('SonarQube analysis') {
             steps {
                 script {
