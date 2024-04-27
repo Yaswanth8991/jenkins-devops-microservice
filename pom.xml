@@ -220,17 +220,15 @@
 
 	<repositories>
 		<repository>
-			<id>spring-snapshots</id>
-			<name>Spring Snapshots</name>
-			<url>https://repo.spring.io/snapshot</url>
+			<id>central</id>
+			<url>https://yash05.jfrog.io/artifactory/dev-libs-release/snapshot</url>
 			<snapshots>
-				<enabled>true</enabled>
+				<enabled>false</enabled>
 			</snapshots>
 		</repository>
 		<repository>
-			<id>spring-milestones</id>
-			<name>Spring Milestones</name>
-			<url>https://repo.spring.io/milestone</url>
+			<id>snapshot</id>
+			<url>https://yash05.jfrog.io/artifactory/dev-libs-snapshot</url>
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
