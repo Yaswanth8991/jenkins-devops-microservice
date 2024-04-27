@@ -221,7 +221,7 @@
        		<repository>
          		<id>internal.repo</id>
          		<name>Internal repo</name>
-         		<url>file:///home/ubuntu</url>
+         		<url>https://yash05.jfrog.io/artifactory/dev-libs-release</url>
        		</repository>
    	</distributionManagement>
 	
