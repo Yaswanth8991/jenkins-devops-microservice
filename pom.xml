@@ -218,12 +218,11 @@
 		</plugins>
 	</build>
 	<distributionManagement>
-       		<repository>
-         		<id>internal.repo</id>
-         		<name>Internal repo</name>
-         		<url>https://yash05.jfrog.io/artifactory/dev-libs-release</url>
-       		</repository>
-   	</distributionManagement>
+		<repository>
+			<id>dev</id>
+			<url>file://jarstaging</url>
+		</repository>
+	</distributionManagement>
 	
 	<pluginRepositories>
 		<pluginRepository>
