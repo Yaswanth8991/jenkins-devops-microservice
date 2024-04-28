@@ -1,4 +1,6 @@
 def registry = 'https://yash05.jfrog.io/'
+def imageName = 'yash05.jfrog.io/yashd-docker-local/ttrend'
+def version   = '0.0.1'
 pipeline {
     agent {
         node {
@@ -63,7 +65,28 @@ pipeline {
             
             }
         }   
-    }   
+    }  
+        stage(" Docker Build ") {
+      steps {
+        script {
+           echo '<--------------- Docker Build Started --------------->'
+           app = docker.build(imageName+":"+version)
+           echo '<--------------- Docker Build Ends --------------->'
+        }
+      }
+    }
+
+            stage (" Docker Publish "){
+        steps {
+            script {
+               echo '<--------------- Docker Publish Started --------------->'  
+                docker.withRegistry(registry, 'Artifactory-cred'){
+                    app.push()
+                }    
+               echo '<--------------- Docker Publish Ended --------------->'  
+            }
+        }
+    }
 
     }
 }
